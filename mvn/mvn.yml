@@ -7,8 +7,14 @@
       ansible.builtin.apt:
         name: openjdk-17-jdk
         state: present
-    - name: urlk
+    - name: url
       ansible.builtin.uri:
         url:  https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+        dest: /bin/
         mode: "777"
-        
+    - name: Extract 
+      ansible.builtin.unarchive:
+        src: /bin/
+        dest: /opt/
+
+
