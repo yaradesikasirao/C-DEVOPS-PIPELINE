@@ -1,0 +1,14 @@
+---
+- name: spc
+  hosts: all
+  become: yes
+  tasks:
+    - name: install java
+      ansible.builtin.apt:
+        name: openjdk-17-jdk
+        state: present
+    - name: urlk
+      ansible.builtin.uri:
+        url:  https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+        mode: "777"
+        
