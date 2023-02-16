@@ -10,11 +10,11 @@
     - name: url
       ansible.builtin.uri:
         url:  https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
-        dest: /bin/
+        dest: /tmp/
         mode: "777"
     - name: Extract 
       ansible.builtin.unarchive:
-        src: /bin/
+        src: /tmp/
         dest: /opt/
         remote_src: yes
 
