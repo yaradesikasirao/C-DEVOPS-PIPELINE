@@ -7,6 +7,6 @@ trigger:
   - main
 
 steps:
-  - template: ./templates/maven-build.yaml
+  - template: ./pipe mvn/mvn.yml
 
 
