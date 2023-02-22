@@ -11,7 +11,7 @@ parameters:
   - install
   - package
   - compile
-  default: '3.8.7'
+  default: 'package'
   type: string
 - name: jdkversion
   displayName: 'java Version'
@@ -20,7 +20,7 @@ parameters:
 - name: pomFilePath
   displayName: maven pom file
   type: string
-  default : 'pom.xl'
+  default : 'pom.xml'
     
 steps:
 - task: Maven@3
